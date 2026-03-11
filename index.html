@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Семинар О.Г. Приходько | Точная диагностика</title>
+    <meta name="description"
+        content="Очный интенсив Оксаны Георгиевны Приходько. Точная диагностика детей 0-7 лет. 7 часов практики для логопедов, дефектологов и нейропсихологов.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header (Simple) -->
+    <header class="header">
+        <div class="container header-inner">
+            <div class="logo">ВЕКТОР РАЗВИТИЯ <span style="opacity: 0.5;">| ПРОФЕССИОНАЛАМ</span></div>
+            <a href="#register" class="btn btn-outline-header">Занять место</a>
+        </div>
+    </header>
+
+    <!-- Block 1: Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="badge">Очный практический семинар</div>
+                <h1 class="hero-title"
+                    style="font-size: clamp(1.8rem, 4.5vw, 2.4rem); line-height: 1.3; margin-bottom: 20px;">
+                    Практический семинар:<br>
+                    <span style="font-size: clamp(1.2rem, 3.5vw, 1.8rem);">«Современные подходы к диагностике и
+                        коррекции речевых нарушений у детей раннего и дошкольного возраста»</span>
+                </h1>
+
+                <h2
+                    style="font-size: 1.25rem; font-weight: 700; color: var(--color-primary-dark); margin-bottom: 24px; line-height: 1.4;">
+                    <span class="highlight" style="font-size: 1.5rem;">8 (ак.) часов практики с профессором</span>
+                </h2>
+
+                <div class="event-details"
+                    style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 32px;">
+                    <div
+                        style="background: #fff; padding: 16px 20px; border-radius: 8px; box-shadow: var(--shadow-sm); border: 1px solid var(--color-border); display: flex; align-items: center; gap: 12px; text-align: left; flex: 1; min-width: 200px;">
+                        <span style="font-size: 1.8rem;">📅</span>
+                        <span style="line-height: 1.3;">
+                            <strong style="color: var(--color-text-dark); font-size: 1rem;">3 апреля 2026</strong><br>
+                            <span style="font-size: 0.85rem; color: var(--color-text-muted);">С 10:00 до 17:00</span>
+                        </span>
+                    </div>
+                    <div
+                        style="background: #fff; padding: 16px 20px; border-radius: 8px; box-shadow: var(--shadow-sm); border: 1px solid var(--color-border); display: flex; align-items: center; gap: 12px; text-align: left; flex: 1; min-width: 250px;">
+                        <span style="font-size: 1.8rem;">📍</span>
+                        <span style="line-height: 1.3;">
+                            <strong style="color: var(--color-text-dark); font-size: 0.95rem;">ул. Титова,
+                                14</strong><br>
+                            <span style="font-size: 0.85rem; color: var(--color-text-muted);">Центр развития ребенка
+                                (Д/С 179)</span>
+                        </span>
+                    </div>
+                </div>
+
+                <p class="hero-subtitle">
+                    💯 Это уникальная возможность поучиться, пообщаться с Мэтром отечественной логопедии. Задать
+                    вопросы, сфотографироваться.<br><br>
+                    Заберите авторскую методологию дифференциации сложных нарушений от создателя федеральных
+                    образовательных стандартов.
+                </p>
+                <div class="hero-cta-box">
+                    <a href="#register" class="btn btn-primary btn-xl" id="hero-price">Занять место за 5 000 ₽</a>
+                    <div class="urgency-tag">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="icon">
+                            <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"
+                                stroke="currentColor" stroke-width="2" />
+                            <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                        <div class="timer-block">
+                            <span id="days">00</span>
+                            <small>Дней</small>
+                        </div>
+                        <div class="timer-separator">:</div>
+                        <div class="timer-block">
+                            <span id="hours">00</span>
+                            <small>Часов</small>
+                        </div>
+                        <div class="timer-separator">:</div>
+                        <div class="timer-block">
+                            <span id="minutes">00</span>
+                            <small>Минут</small>
+                        </div>
+                        <div class="timer-separator">:</div>
+                        <div class="timer-block">
+                            <span id="seconds">00</span>
+                            <small>Секунд</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Block 2: Value Proposition -->
+    <section class="section bg-white" id="values">
+        <div class="container">
+            <h2 class="section-title text-center">Почему это необходимо<br>вашей практике</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">Более 40 лет</div>
+                    <h3 class="value-title">Клинического опыта</h3>
+                    <p class="value-desc">Весь материал прошел апробацию и подкреплен реальными кейсами коррекции детей
+                        с ОВЗ.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">100%</div>
+                    <h3 class="value-title">Научный подход</h3>
+                    <p class="value-desc">Методики соответствуют доказательной базе отечественной логопедии.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">8 (ак.) часов</div>
+                    <h3 class="value-title">Плотный интенсив</h3>
+                    <p class="value-desc">Никаких вводных лекций — только алгоритмы обследования и коррекционные векторы
+                        «от и до».</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="23 7 16 12 23 17 23 7"></polygon>
+                            <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+                        </svg>
+                    </div>
+                    <h3 class="value-title">Авторские материалы</h3>
+                    <p class="value-desc">Авторские презентационные и видеоматериалы для детального разбора на практике.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Block 2.5: Seminar Program -->
+    <section class="section" id="program" style="background-color: var(--color-surface);">
+        <div class="container" style="max-width: 900px;">
+            <div class="badge" style="display: block; width: max-content; margin: 0 auto 20px auto;">Программа семинара
+            </div>
+            <h2 class="section-title text-center" style="margin-bottom: 30px;">Что будет на семинаре: от диагностики к
+                стимуляции речи</h2>
+
+            <p style="text-align: center; color: var(--color-text-muted); font-size: 1.1rem; margin-bottom: 50px;">
+                Семинар проходит с использованием многочисленных авторских презентационных и видеоматериалов (разбор
+                реальных обследований и занятий с детьми ОВЗ).
+            </p>
+
+            <div class="program-list">
+                <div class="program-item">
+                    <div class="program-number">1</div>
+                    <div class="program-content">
+                        <h4 class="program-title">Комплексное обследование основных линий развития</h4>
+                        <p>Младенческий, ранний и дошкольный возраст (авторская методика О.Г. Приходько). Работа с
+                            картами-схемами. Определение ведущего расстройства и структуры нарушений. Формулирование
+                            точного заключения.</p>
+                    </div>
+                </div>
+
+                <div class="program-item">
+                    <div class="program-number">2</div>
+                    <div class="program-content">
+                        <h4 class="program-title">Ранние признаки неблагополучия</h4>
+                        <p>Ранняя помощь ребенку с ОВЗ и его семье. Принципы, формы и технологии
+                            коррекционно-развивающей работы в первые годы жизни.</p>
+                    </div>
+                </div>
+
+                <div class="program-item">
+                    <div class="program-number">3</div>
+                    <div class="program-content">
+                        <h4 class="program-title">Стимуляция речи и коррекция</h4>
+                        <p>Как выявить проблемы в доречевом периоде. Развитие понимания обращенной речи. Стимуляция
+                            голосовых, слоговых реакций и собственной речевой активности у детей от 0 до 7 лет.</p>
+                    </div>
+                </div>
+
+                <div class="program-item">
+                    <div class="program-number">4</div>
+                    <div class="program-content">
+                        <h4 class="program-title">Дифференцированный логопедический массаж</h4>
+                        <p>Показания, противопоказания и основные задачи при коррекции произносительной стороны речи.
+                            Авторский подход к массажу для младенцев, раннего и дошкольного возраста.</p>
+                    </div>
+                </div>
+
+                <div class="program-item">
+                    <div class="program-number">5</div>
+                    <div class="program-content">
+                        <h4 class="program-title">Профессиональная дискуссия</h4>
+                        <p>Разбор диагностически сложных случаев из практики. Ответы на острые вопросы.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Block 3: Results (Table/Cards) -->
+    <section class="section bg-white" id="results">
+        <div class="container">
+            <h2 class="section-title text-center">Результат в кабинете:<br>от диагностики до стратегии</h2>
+
+            <div class="results-grid">
+                <!-- Row 1 -->
+                <div class="result-card problem">
+                    <div class="result-label error">Ситуация (Боль)</div>
+                    <h4 class="result-heading">Ранний возраст (0–3 года)</h4>
+                    <p>Страх ошибиться в диагнозе, когда классические тесты еще не информативны.</p>
+                </div>
+                <div class="result-card solution">
+                    <div class="result-label success">Ваше решение после семинара</div>
+                    <h4 class="result-heading highlight">Дифференциация за 1 прием</h4>
+                    <p>Вы научитесь отделять первичную задержку речи от системных патологий на раннем этапе.</p>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="result-card problem">
+                    <div class="result-label error">Ситуация (Боль)</div>
+                    <h4 class="result-heading">Сложные сочетанные нарушения</h4>
+                    <p>Тупик в работе, когда стандартные упражнения не дают прогресса месяцами.</p>
+                </div>
+                <div class="result-card solution">
+                    <div class="result-label success">Ваше решение после семинара</div>
+                    <h4 class="result-heading highlight">Индивидуальная стратегия</h4>
+                    <p>Вы получите логику построения маршрута, которая дает видимый результат родителям уже через 4
+                        недели.</p>
+                </div>
+
+                <!-- Row 3 -->
+                <div class="result-card problem">
+                    <div class="result-label error">Ситуация (Боль)</div>
+                    <h4 class="result-heading">Аттестация и статус</h4>
+                    <p>Сомнения в актуальности своих инструментов перед лицом коллег и комиссий.</p>
+                </div>
+                <div class="result-card solution">
+                    <div class="result-label success">Ваше решение после семинара</div>
+                    <h4 class="result-heading highlight">Экспертность из первоисточника</h4>
+                    <p>Вы оперируете знаниями уровня Госдумы и РУДН, что повышает вашу востребованность на рынке.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Block 4: Expert Profile -->
+    <section class="section bg-white" id="expert">
+        <div class="container">
+            <div class="expert-container">
+                <div class="expert-image">
+                    <img src="Приходько.png" alt="Оксана Георгиевна Приходько"
+                        style="width: 100%; border-radius: 12px; object-fit: cover; aspect-ratio: 3/4; box-shadow: var(--shadow-md);">
+                </div>
+                <div class="expert-info">
+                    <h2 class="section-title" style="margin-bottom: 20px;">Ваш эксперт:<br>Оксана Георгиевна Приходько
+                    </h2>
+
+                    <ul class="expert-list">
+                        <li>
+                            <strong>Доктор педагогических наук, профессор.</strong> Лично подготовила более 5 000
+                            практикующих логопедов и дефектологов страны.
+                        </li>
+                        <li>
+                            <strong>Член Экспертного совета Госдумы РФ.</strong> Автор государственных стандартов ранней
+                            помощи, на которые сегодня опирается вся коррекционная педагогика.
+                        </li>
+                        <li>
+                            <strong>Заведующая кафедрой логопедии и инклюзивного образования РУДН.</strong> Ежедневно
+                            координирует передовые научные исследования, превращая их в рабочие протоколы для практиков.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Block 5: Testimonials -->
+    <section class="section bg-surface" id="testimonials">
+        <div class="container">
+            <h2 class="section-title text-center">Что говорят коллеги</h2>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <p class="testimonial-text">Шла именно за "головой" Приходько. Никакой воды. После семинара
+                        пересмотрела диагностику трех своих "тяжелых" детей — наконец поняла, где мы буксовали полгода.
+                        5 000 рублей окупились за две частные консультации.</p>
+                    <div class="testimonial-author">
+                        <strong>Мария К.</strong>
+                        <span>логопед-дефектолог</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <p class="testimonial-text">Для тех, кто устал от курсов "ни о чем". Оксана Георгиевна дает жесткую
+                        базу. Теперь не боюсь брать малышей до 3 лет, потому что есть четкий алгоритм, что смотреть и
+                        куда направлять. Контент — золото.</p>
+                    <div class="testimonial-author">
+                        <strong>Елена Сергеевна</strong>
+                        <span>частная практика</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <p class="testimonial-text">Редкий случай, когда профессор говорит на языке практика. Разбор
+                        клинических случаев из зала — это отдельный вид терапии для специалиста. Ушла с четким планом,
+                        что менять в диагностическом приеме уже в понедельник.</p>
+                    <div class="testimonial-author">
+                        <strong>Ольга</strong>
+                        <span>нейропсихолог</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <p class="testimonial-text">Материал подан очень структурированно. Огромное спасибо Оксане
+                        Георгиевне за детальный разбор сложных случаев из практики. Теперь у меня есть четкое понимание
+                        маршрутизации.</p>
+                    <div class="testimonial-author">
+                        <strong>Наталья Анатольевна</strong>
+                        <span>логопед</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Block 6: FAQ -->
+    <section class="section bg-white" id="faq">
+        <div class="container" style="max-width: 800px;">
+            <h2 class="section-title text-center">Ответы на профессиональные вопросы</h2>
+
+            <div class="faq-accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Смогу ли я разобрать свой конкретный случай из практики?
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-inner">
+                            <p>Да. Мы выделили время на интерактив, где вы можете представить анамнез своего «сложного»
+                                ребенка и получить прямую стратегию коррекции от профессора.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Почему формат — именно очный семинар, а не серия вебинаров?
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-inner">
+                            <p>Очный формат позволяет видеть, как работает эксперт «в поле», и моментально получать
+                                обратную обратную связь.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Подойдет ли программа нейропсихологам и дефектологам?
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-inner">
+                            <p>Да. Нарушения развития у детей 0–7 лет всегда сочетанные. Профессор дает
+                                междисциплинарный подход, который поможет нейропсихологам понять речевые механизмы, а
+                                дефектологам — маркеры органики.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Будет ли выдаваться какой-то документ?
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-inner">
+                            <p>Будет выдаваться Сертификат участника практического семинара.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Что делать, если мои планы изменятся после оплаты?
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-inner">
+                            <p>Если вы предупредите нас до 1 апреля, мы вернем 100% стоимости без лишних вопросов.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Block 7: Registration CTA & Footer -->
+    <section class="section bg-surface text-center" id="register">
+        <div class="container" style="max-width: 700px;">
+            <h2 class="section-title" style="margin-bottom: 24px;">Забронируйте участие</h2>
+            <p class="hero-subtitle">Стоимость участия: 5 000 ₽ до 25 марта. После 25 марта 6000 ₽. Оставьте контакты,
+                чтобы забронировать
+                место, получить ссылку на оплату T-Bank и схему проезда.</p>
+
+            <form id="registration-form" class="registration-form">
+                <input type="text" name="name" id="form-name" placeholder="Ваше Имя" required class="form-input">
+                <input type="tel" name="phone" id="form-phone" placeholder="Номер телефона" required class="form-input">
+                
+                <div class="legal-checkbox-container">
+                    <input type="checkbox" id="legal-consent" name="legal-consent" required>
+                    <label for="legal-consent" class="legal-checkbox-label">
+                        Нажимая на кнопку, я даю <a href="consent.html" target="_blank">согласие на обработку персональных данных</a> и соглашаюсь с <a href="policy.html" target="_blank">Политикой конфиденциальности</a>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-xl" id="submit-btn"
+                    style="width: 100%; max-width: none;">Оставить заявку</button>
+                <div id="form-response" style="margin-top: 15px; font-weight: bold; display: none;"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Simple Footer -->
+    <footer
+        style="background: var(--color-primary-dark); padding: 40px 0; color: rgba(255,255,255,0.7); text-align: center; font-size: 0.9rem;">
+        <div class="container">
+            <p>© 2026 Практический семинар О.Г. Приходько.</p>
+            
+            <div class="footer-legal-links">
+                <a href="policy.html" target="_blank">Политика в отношении обработки персональных данных</a>
+                <a href="consent.html" target="_blank">Согласие на обработку персональных данных</a>
+                <a href="offer.html" target="_blank">Договор-оферта на оказание информационно-консультационных услуг</a>
+            </div>
+
+            <p class="footer-disclaimer">
+                * Фотография и биографические данные эксперта О.Г. Приходько (ст. 152.1 ГК РФ) размещены с личного согласия правообладателя.
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
