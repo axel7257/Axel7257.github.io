@@ -136,9 +136,13 @@ document.addEventListener('DOMContentLoaded', () => {
             // Required T-Bank fields
             tbankForm.innerHTML = `
                 <input type="hidden" name="terminalkey" value="1773258249857DEMO">
-                <input type="hidden" name="frame" value="true">
+                <input type="hidden" name="frame" value="false">
                 <input type="hidden" name="language" value="ru">
                 <input type="hidden" name="receipt" value="">
+                
+                <!-- Redirect URLs after payment -->
+                <input type="hidden" name="successAddUrl" value="https://axel7257.github.io/?payment=success">
+                <input type="hidden" name="failAddUrl" value="https://axel7257.github.io/?payment=fail">
                 
                 <!-- Order specifics -->
                 <input type="hidden" name="amount" value="${currentPrice}">
