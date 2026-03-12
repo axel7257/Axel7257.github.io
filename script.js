@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // Required T-Bank fields
             tbankForm.innerHTML = `
-                <input type="hidden" name="terminalkey" value="1773258249857DEMO">
+                <input type="hidden" name="terminalkey" value="1773258249881">
                 <input type="hidden" name="frame" value="false">
                 <input type="hidden" name="language" value="ru">
                 <input type="hidden" name="receipt" value="">
