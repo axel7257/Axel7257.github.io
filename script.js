@@ -119,6 +119,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 }).catch(err => console.error('Error logging to Google Sheets:', err));
             }
 
+            // 1a. Send event to VK Ads (Pixel tracking)
+            if (typeof _tmr !== 'undefined') {
+                _tmr.push({ type: 'reachGoal', id: 3750161, goal: 'booking' });
+            }
+
             // 2. Trigger T-Bank Payment Widget
             
             // Calculate current price based on deadline
