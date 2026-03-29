@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // Обновляем текст цены, если он еще не обновлен
                 if (heroPriceBtn) heroPriceBtn.innerText = "Занять место за 6 000 ₽";
-                if (formSubtitle) formSubtitle.innerText = "Стоимость участия: 6 000 ₽. Оставьте контакты...";
+                if (formSubtitle) formSubtitle.innerText = "Стоимость участия: 6 000 ₽. Оставьте контакты и оплатите участие";
                 return;
             }
             if (daysEl) daysEl.innerText = Math.floor(dist / 86400000);
