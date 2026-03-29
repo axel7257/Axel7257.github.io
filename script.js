@@ -112,12 +112,22 @@ document.addEventListener('DOMContentLoaded', function() {
         var hoursEl = document.getElementById('hours');
         var minsEl = document.getElementById('minutes');
         var secsEl = document.getElementById('seconds');
+        var heroPriceBtn = document.getElementById('hero-price');
+        var formSubtitle = document.querySelector('#register .hero-subtitle');
         
         var timerInterval = setInterval(function() {
             var now = new Date().getTime();
             var dist = deadline - now;
+            
             if (dist < 0) {
                 clearInterval(timerInterval);
+                // Если дедлайн прошел, скрываем блок таймера (если он есть)
+                var urgencyBox = document.querySelector('.urgency-tag');
+                if (urgencyBox) urgencyBox.style.display = 'none';
+                
+                // Обновляем текст цены, если он еще не обновлен
+                if (heroPriceBtn) heroPriceBtn.innerText = "Занять место за 6 000 ₽";
+                if (formSubtitle) formSubtitle.innerText = "Стоимость участия: 6 000 ₽. Оставьте контакты...";
                 return;
             }
             if (daysEl) daysEl.innerText = Math.floor(dist / 86400000);
