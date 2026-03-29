@@ -111,25 +111,37 @@ document.addEventListener('DOMContentLoaded', () => {
             const formData = new FormData(form);
             formData.append('timestamp', new Date().toLocaleString("ru-RU"));
 
-            // 1b. Capture UTM parameters for lead attribution
-            const urlParams = new URLSearchParams(window.location.search);
-            ['utm_source', 'utm_medium', 'utm_campaign'].forEach(param => {
-                if (urlParams.has(param)) {
-                    formData.append(param, urlParams.get(param));
+            // 1b. Capture UTM parameters for lead attribution (Safe mode)
+            try {
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmParams = ['utm_source', 'utm_medium', 'utm_campaign'];
+                for (var i = 0; i < utmParams.length; i++) {
+                    var param = utmParams[i];
+                    if (urlParams.has(param)) {
+                        formData.append(param, urlParams.get(param));
+                    }
                 }
-            });
+            } catch (utmErr) {
+                console.error('UTM tracking error:', utmErr);
+            }
 
             // 1. Send data precisely to Google Sheets (Silent mode)
             if (googleAppsScriptURL && googleAppsScriptURL !== "ВАШ_URL_ИЗ_GOOGLE_АПП_СКРИПТА") {
                 fetch(googleAppsScriptURL, {
                     method: 'POST',
                     body: formData
-                }).catch(err => console.error('Error logging to Google Sheets:', err));
+                }).catch(function (err) { 
+                    console.error('Error logging to Google Sheets:', err);
+                });
             }
 
-            // 1a. Send event to VK Ads (Pixel tracking)
-            if (typeof _tmr !== 'undefined') {
-                _tmr.push({ type: 'reachGoal', id: 3750161, goal: 'booking' });
+            // 1a. Send event to VK Ads (Pixel tracking - Safe mode)
+            try {
+                if (typeof _tmr !== 'undefined') {
+                    _tmr.push({ type: 'reachGoal', id: 3750161, goal: 'booking' });
+                }
+            } catch (vkErr) {
+                console.error('VK tracking error:', vkErr);
             }
 
             // 2. Trigger T-Bank Payment Widget
