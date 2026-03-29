@@ -111,6 +111,14 @@ document.addEventListener('DOMContentLoaded', () => {
             const formData = new FormData(form);
             formData.append('timestamp', new Date().toLocaleString("ru-RU"));
 
+            // 1b. Capture UTM parameters for lead attribution
+            const urlParams = new URLSearchParams(window.location.search);
+            ['utm_source', 'utm_medium', 'utm_campaign'].forEach(param => {
+                if (urlParams.has(param)) {
+                    formData.append(param, urlParams.get(param));
+                }
+            });
+
             // 1. Send data precisely to Google Sheets (Silent mode)
             if (googleAppsScriptURL && googleAppsScriptURL !== "ВАШ_URL_ИЗ_GOOGLE_АПП_СКРИПТА") {
                 fetch(googleAppsScriptURL, {
